@@ -16,8 +16,6 @@ def longestLine(fileName):
         lengths.append([len(line), line])
     return max(lengths)[1]
 
-longestLine('hello.txt')
-
 def toBinary(fileName):
     #Given a file that is only 0's and 1's return a list of the file broken into bytes.
     #An example return might be ['01101001', '00101010', '1010']
