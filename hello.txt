@@ -1,0 +1,11 @@
+Hi!
+
+I am a file to be read for this assignment
+
+there are a few
+
+lines here of different length,
+
+did you know?
+
+Goodbye!
