@@ -1,5 +1,3 @@
-#You must make and submit your own test file and txt file with this assignment.
-
 def toString(fileName):
     #This function returns the text from a given file.
     #Any new lines are written as \n
@@ -12,9 +10,30 @@ def toString(fileName):
 
 def longestLine(fileName):
     #Given a file return the longest line from within that file
-    pass
+    lengths = []
+    f = open(fileName)
+    for line in f:
+        lengths.append([len(line), line])
+    return max(lengths)[1]
+
+longestLine('hello.txt')
 
 def toBinary(fileName):
     #Given a file that is only 0's and 1's return a list of the file broken into bytes.
     #An example return might be ['01101001', '00101010', '1010']
-    pass
+    newList = []
+    string = toString(fileName)
+    while string:
+        append = ''
+        while len(append) < 8:
+            if len(string) < 8 and append == '':
+                append = string
+                string = ''
+                break
+            elif string[0] == "\n":
+                string = string[1:]
+            else:
+                append += string[0]
+                string = string[1:]
+        newList.append(append)
+    return newList
